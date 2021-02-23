@@ -1,0 +1,107 @@
+body {
+    margin: 0 auto;
+}
+
+.container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "header menu menu menu" "hero hero hero hero" "main main text image" "main main text extra" "banner banner banner banner";
+    -ms-grid-rows: 12% 0 6fr 0 1fr 0 1.5fr 0 15%;
+    grid-template-rows: 12% 6fr 1fr 1.5fr 15%;
+    -ms-grid-columns: 25% 0 3fr 0 4fr 0 20%;
+    grid-template-columns: 25% 3fr 4fr 20%;
+    grid-gap: 0;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    background: #050d24;
+    text-transform: uppercase;
+    color: white;
+}
+
+#menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 5;
+    grid-area: menu;
+    background: #ff3a4b;
+    text-transform: uppercase;
+    color: white;
+}
+
+#hero {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-area: hero;
+    background: #0386ca;
+    text-transform: uppercase;
+    color: white;
+    line-height: 400px;
+}
+
+#main {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: main;
+    background: #14314a;
+    text-transform: uppercase;
+    color: white;
+    line-height: 150px;
+}
+
+#text {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+    grid-area: text;
+    background: #ffffff;
+    color: #000000;
+    line-height: 150px;
+}
+
+#image {
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    grid-area: image;
+    background: #b2e5e7;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+#extra {
+    -ms-grid-row: 7;
+    -ms-grid-column: 7;
+    grid-area: extra;
+    background: #00be97;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+#banner {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-area: banner;
+    background: #ffd361;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 50px;
+}
